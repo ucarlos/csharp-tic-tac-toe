@@ -1,0 +1,27 @@
+#+title: Hacker_Guide
+#+author: 
+* Tic-Tac-Toe Problem Outline
+** Class Outlines
+You've implemented this problem before in C++, so it shouldn't be new to you.
+Basically, you have a 2d array of tiles, which are instances of a Tile class.
+Each title contains the following:
++ Enum that determines whether the tile has been marked or not
++ The character that marks the tile
++ Setters and getters which change the state of the enum and the character.
++ Appropriate constructors
+
+The tiles are contained in an global/local array.
+
+Since two players are needed to play the game, there needs to be a Player class
+The class requires the following:
++ A container (vector or map) that contains the indices of the tiles the Player marked.
++ The character that indicates the player
++ Member function that determine if the player has won or not.
++ (OPTIONAL?) A value that indicates how many turns the player has taken in the current game.
+
+Finally, there needs to be a Draw Class/method that prints the current map after each player takes his turn.
+** Winning Conditions
+In order to win the game, a player has to have three of his tiles in a row (horizontal, vertical, horizontal)
+
+** Additional Considerations
+* 

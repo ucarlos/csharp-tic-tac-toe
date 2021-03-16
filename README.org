@@ -1,0 +1,20 @@
+#+title: Tic Tac Toe: C# Style
+#+author: Ulysses Carlos
+#+date: <2021-03-15 Mon>
+This in a C# Implementation of Tic-Tac-Toe that makes the use of C#-style methodology.
+
+* Program Requirements
+The following list contains the requirements for Tic-Tac-Toe:
++ The game is console-based (No GUI)
++ Two human players take turns using the same keyboard.
+  
++ The players are able to designate which square they want to play in next using the keyboard.
+  1. One possible approach would be to number the squares in the 3x3 board with the digits 1 through 9, like the number pad on the keyboard. If the player enters the number 7, then the top left corner of the board is chosen.
++ The game should ensure that only legal moves are made.
+  1. You cannot play in a square that already had something
+  2. The wrong player cannot make a turn.
+  3. If the player makes an illegal move, the board should remain unchanged.
++ The game needs to be able to detect when either player winds, or when a draw("cat") happens (the board is full).
++ Upon detecting that the game is over is displayed to the user.
++ Only a single round of play is required.  
+* How to compile
