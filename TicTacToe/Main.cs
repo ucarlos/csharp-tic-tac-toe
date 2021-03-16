@@ -49,7 +49,6 @@ namespace TicTacToe {
             tile_map[index - 1].character = player.player_character;
             player.push_back_index(index);
             
-
             bool check_win = player.check_winning_condition();
             if (check_win) {
                 Drawer.draw_map(ref tile_map);
@@ -57,6 +56,21 @@ namespace TicTacToe {
                 Environment.Exit(0);
             }
             
+            // Now check if the game ended in a draw:
+            bool check_draw = map_is_full(ref tile_map);
+            if (!check_draw) return;
+            Drawer.draw_map(ref tile_map);
+            Console.WriteLine("This game has ended in a draw.");
+            Environment.Exit(0);
+            
+        }
+
+        public static bool map_is_full(ref Tile[] Tile_Map) {
+            int count = 0;
+            foreach (var i in Tile_Map) {
+                if (i.marked) count++;
+            }
+            return (count == Tile_Map.Length);
         }
         
         public static void Main(string[] args) {
